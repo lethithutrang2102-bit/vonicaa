@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f8f9fa">
+<title>VONICA — Podcast của bạn, thế giới của bạn</title>
+<style>
+:root{--green:#16834b;--green-dark:#11683c;--ink:#17211b;--muted:#69736d;--line:#e4e9e5;--surface:#fff;--canvas:#f5f7f5;--soft:#eaf5ee;--shadow:0 12px 34px rgba(22,53,34,.07)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--canvas);color:var(--ink);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}.app{min-height:100vh;padding-bottom:105px}.sidebar{position:fixed;inset:0 auto 0 0;width:245px;background:#fff;border-right:1px solid var(--line);padding:25px 17px;display:flex;flex-direction:column;z-index:5}.brand{display:flex;align-items:center;gap:11px;padding:0 9px 28px;font-size:23px;font-weight:850;letter-spacing:-1px}.brand-mark{width:39px;height:39px;border-radius:13px;background:var(--green);color:#fff;display:grid;place-items:center;font-size:20px;box-shadow:0 5px 13px #16834b2c}.nav-label{font-size:11px;color:#8a948d;font-weight:800;letter-spacing:1.3px;padding:12px 12px 8px}.nav{display:grid;gap:5px}.nav button{border:0;background:transparent;color:#59635c;text-align:left;border-radius:11px;padding:11px 12px;display:flex;align-items:center;gap:12px;font-weight:650}.nav button .ico{width:21px;text-align:center;font-size:18px}.nav button:hover,.nav button.active{background:var(--soft);color:var(--green-dark)}.side-note{margin-top:auto;padding:14px;border:1px solid var(--line);border-radius:14px;background:#fbfcfb;font-size:12px;color:var(--muted)}.side-note strong{display:block;color:var(--ink);font-size:13px;margin-bottom:4px}.main{margin-left:245px;padding:0 34px 34px;max-width:1700px}.topbar{height:78px;display:flex;align-items:center;gap:16px;position:sticky;top:0;background:#f5f7f5ed;backdrop-filter:blur(14px);z-index:4}.search{position:relative;flex:1;max-width:590px}.search span{position:absolute;left:15px;top:10px;color:#79837c;font-size:19px}.search input{width:100%;border:1px solid #dce4dd;background:#fff;border-radius:999px;padding:12px 17px 12px 44px;outline:none}.search input:focus{border-color:#7ab994;box-shadow:0 0 0 3px #16834b12}.top-spacer{flex:1}.pill{border:1px solid #dfe6e0;background:#fff;border-radius:999px;padding:9px 15px;font-weight:700;color:#354138}.pill.primary{background:var(--green);color:#fff;border-color:var(--green)}.pill.primary:hover{background:var(--green-dark)}.avatar{width:38px;height:38px;border-radius:50%;background:#dcefe2;color:var(--green-dark);display:grid;place-items:center;font-weight:800}.hero{background:linear-gradient(115deg,#e8f5eb 0%,#f5f8ee 55%,#edf6f3 100%);border:1px solid #e0eee3;border-radius:26px;padding:clamp(25px,4vw,48px);display:grid;grid-template-columns:minmax(0,1.25fr) minmax(210px,.75fr);gap:24px;align-items:center;overflow:hidden;position:relative}.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#fff9;border:1px solid #d7e9dc;border-radius:999px;padding:6px 11px;color:var(--green-dark);font-size:11px;font-weight:850;letter-spacing:1px}.hero h1{font-size:clamp(34px,4vw,57px);line-height:1.05;letter-spacing:-2px;margin:20px 0 15px;max-width:650px}.hero h1 span{color:var(--green)}.hero p{color:#5c6d60;max-width:580px;font-size:16px;margin:0 0 23px}.hero-actions{display:flex;gap:10px;flex-wrap:wrap}.hero-art{min-height:220px;position:relative;display:grid;place-items:center}.disc{width:min(245px,75%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#dff4c8 0 8%,#8ed0a5 9% 22%,#3d9868 23% 48%,#1d6d47 49% 68%,#174d35 69%);box-shadow:0 25px 45px #28674430;display:grid;place-items:center;transform:rotate(-13deg)}.disc:before{content:"";width:34%;aspect-ratio:1;border-radius:50%;background:#f5f7f5;border:12px solid #d6e6d9;box-shadow:inset 0 0 0 4px #7aa78a}.float-card{position:absolute;right:2%;bottom:7%;background:#fff;border:1px solid #e4ebe5;border-radius:15px;padding:11px 14px;box-shadow:var(--shadow);font-size:12px}.float-card strong{display:block;font-size:14px}.section{margin-top:35px;scroll-margin-top:92px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:17px}.section-head h2{font-size:23px;letter-spacing:-.7px;margin:0}.section-head p{color:var(--muted);font-size:13px;margin:4px 0 0}.text-button{border:0;background:transparent;color:var(--green-dark);font-weight:800;padding:8px}.chips{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}.chip{border:1px solid var(--line);background:#fff;color:#5c675f;padding:8px 14px;border-radius:999px;font-weight:700;font-size:13px}.chip.active,.chip:hover{background:var(--green);color:white;border-color:var(--green)}.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}.pod-card{min-width:0;background:#fff;border:1px solid var(--line);border-radius:17px;padding:12px;transition:transform .18s,box-shadow .18s}.pod-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.cover{aspect-ratio:1.12;border-radius:12px;display:grid;place-items:center;position:relative;overflow:hidden;color:#fff;font-size:43px}.cover:before,.cover:after{content:"";position:absolute;border-radius:50%;border:1px solid #ffffff40;width:145px;height:145px;right:-35px;top:-36px}.cover:after{width:100px;height:100px;right:-10px;top:-10px}.cover span{position:relative;z-index:1;filter:drop-shadow(0 4px 8px #0002)}.cover.c1{background:linear-gradient(135deg,#245d42,#9bcf87)}.cover.c2{background:linear-gradient(135deg,#223e67,#84b5c9)}.cover.c3{background:linear-gradient(135deg,#7d4b35,#e9b76e)}.cover.c4{background:linear-gradient(135deg,#684b88,#d7a9d9)}.cover.c5{background:linear-gradient(135deg,#255d61,#91d3bd)}.cover.c6{background:linear-gradient(135deg,#7c334b,#ed9c91)}.cover.c7{background:linear-gradient(135deg,#5c6030,#c7d47c)}.cover.c8{background:linear-gradient(135deg,#343d50,#a9b8ce)}.pod-title{font-size:15px;font-weight:800;margin:12px 2px 3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.pod-meta{font-size:12px;color:var(--muted);margin:0 2px 12px}.card-bottom{display:flex;align-items:center;justify-content:space-between;gap:7px}.mini-play,.heart{width:37px;height:37px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);background:#fff;color:var(--green-dark);font-size:17px}.mini-play{background:var(--green);color:#fff;border-color:var(--green)}.heart.liked{background:#fff0f1;border-color:#ffd4d8;color:#d93f5a}.duration{font-size:11px;color:var(--muted)}.empty{border:1px dashed #cad8cd;border-radius:16px;padding:30px;text-align:center;color:var(--muted);background:#fff}.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.feature{background:#fff;border:1px solid var(--line);border-radius:19px;padding:22px;display:flex;gap:16px;align-items:flex-start}.feature-icon{width:48px;height:48px;flex:0 0 auto;display:grid;place-items:center;background:var(--soft);border-radius:14px;font-size:23px}.feature h3{margin:0 0 5px;font-size:17px}.feature p{margin:0 0 14px;color:var(--muted);font-size:13px}.upload-box{border:1px dashed #b8d6c1;border-radius:13px;padding:15px;background:#f8fcf9}.upload-box input{width:100%;font-size:13px}.backend-tag{display:inline-block;font-size:10px;font-weight:850;letter-spacing:.5px;padding:4px 7px;border-radius:5px;background:#fff2d8;color:#805619}.local-tag{display:inline-block;font-size:10px;font-weight:850;letter-spacing:.5px;padding:4px 7px;border-radius:5px;background:#e8f6ec;color:#236a3f}.library-row{display:flex;align-items:center;gap:13px;background:#fff;border:1px solid var(--line);border-radius:13px;padding:11px 14px;margin-bottom:9px}.library-art{width:48px;height:48px;display:grid;place-items:center;border-radius:10px;background:var(--soft);font-size:23px}.library-info{flex:1;min-width:0}.library-info strong{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.library-info small{color:var(--muted)}.notice{background:#fff8e9;border:1px solid #f0dfb7;color:#705727;border-radius:13px;padding:13px 15px;font-size:12px;margin-top:14px}.footer{padding:30px 0 10px;color:#778179;font-size:11px;text-align:center}.footer strong{color:#47554b}.player{position:fixed;bottom:0;left:0;right:0;height:86px;background:#fff;border-top:1px solid var(--line);z-index:10;display:grid;grid-template-columns:1fr 1.3fr 1fr;align-items:center;padding:10px 24px;gap:20px}.now-playing{display:flex;align-items:center;gap:12px;min-width:0}.now-cover{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,#2c704a,#acd4a2);display:grid;place-items:center;color:white;font-size:22px;flex:0 0 auto}.now-info{min-width:0}.now-info strong,.now-info small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.now-info small{color:var(--muted);font-size:12px}.player-center{display:grid;gap:5px;max-width:560px;width:100%;justify-self:center}.controls{display:flex;align-items:center;justify-content:center;gap:19px}.control{border:0;background:transparent;color:#465149;font-size:17px}.control.play{width:36px;height:36px;border-radius:50%;background:var(--green);color:#fff}.progress-line{display:flex;align-items:center;gap:9px;color:var(--muted);font-size:10px}.progress-line input{width:100%;accent-color:var(--green)}.volume{display:flex;align-items:center;justify-content:end;gap:10px;color:var(--muted)}.volume input{max-width:105px;accent-color:var(--green)}.toast{position:fixed;bottom:105px;left:50%;transform:translateX(-50%);background:#1e2c22;color:#fff;border-radius:999px;padding:10px 16px;font-size:13px;z-index:20;box-shadow:var(--shadow);display:none;max-width:90vw}.toast.show{display:block}.modal-backdrop{position:fixed;inset:0;background:#14201770;display:none;place-items:center;padding:18px;z-index:30}.modal-backdrop.show{display:grid}.modal{background:#fff;border-radius:20px;padding:27px;width:min(440px,100%);box-shadow:0 25px 80px #0002}.modal h2{margin:0 0 5px}.modal p{margin:0 0 17px;color:var(--muted);font-size:13px}.modal label{display:block;font-weight:700;font-size:13px;margin:13px 0}.modal input{display:block;width:100%;margin-top:6px;border:1px solid var(--line);border-radius:9px;padding:11px}.modal-actions{display:flex;gap:8px;margin-top:18px}.modal-actions button{flex:1}.hidden{display:none!important}
+@media(max-width:1150px){.cards{grid-template-columns:repeat(3,minmax(0,1fr))}.main{padding:0 24px}.hero{grid-template-columns:1fr .55fr}.hero-art{min-height:180px}}
+@media(max-width:850px){.sidebar{width:72px;padding:18px 9px}.brand{padding:0 7px 25px}.brand-text,.nav-label,.nav button .nav-text,.side-note{display:none}.nav button{justify-content:center;padding:12px 5px}.nav button .ico{font-size:21px}.main{margin-left:72px;padding:0 17px 25px}.player{grid-template-columns:1fr 1.2fr;padding:9px 13px}.volume{display:none}.hero{grid-template-columns:1fr}.hero-art{display:none}}
+@media(max-width:600px){.topbar{height:68px;gap:8px}.topbar .pill{padding:8px 10px;font-size:12px}.main{padding:0 12px 20px}.hero{padding:25px 21px;border-radius:20px}.hero h1{font-size:36px}.hero p{font-size:14px}.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.pod-card{padding:8px}.pod-title{font-size:13px}.feature-grid{grid-template-columns:1fr}.section-head h2{font-size:20px}.player{height:78px;grid-template-columns:minmax(0,1fr) auto;padding:8px 10px;gap:10px}.player-center{width:auto}.controls{gap:8px}.controls .optional{display:none}.progress-line{display:none}.now-cover{width:42px;height:42px}.now-info strong{font-size:12px}.now-info small{font-size:10px}.player-center{display:block}.player-center .controls{justify-content:flex-end}.app{padding-bottom:90px}.toast{bottom:90px}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <a class="brand" href="#home" aria-label="VONICA trang chủ"><span class="brand-mark">♫</span><span class="brand-text">VONICA</span></a>
+  <div class="nav-label">KHÁM PHÁ</div>
+  <nav class="nav">
+    <button class="active" data-go="home"><span class="ico">⌂</span><span class="nav-text">Trang chủ</span></button>
+    <button data-go="discover"><span class="ico">⌕</span><span class="nav-text">Khám phá podcast</span></button>
+    <button data-go="library"><span class="ico">▤</span><span class="nav-text">Thư viện của tôi</span></button>
+    <button data-go="favorites"><span class="ico">♡</span><span class="nav-text">Yêu thích</span></button>
+  </nav>
+  <div class="nav-label" style="margin-top:20px">SÁNG TẠO</div>
+  <nav class="nav">
+    <button data-go="upload"><span class="ico">⊕</span><span class="nav-text">Đăng podcast</span></button>
+    <button id="sidebarAccount"><span class="ico">♙</span><span class="nav-text">Tài khoản</span></button>
+  </nav>
+  <div class="side-note"><strong>VONICA Podcast</strong>Nghe điều bạn yêu thích. Khám phá góc nhìn mới mỗi ngày.</div>
+</aside>
+
+<main class="main" id="home">
+  <header class="topbar">
+    <div class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Tìm podcast, chủ đề..." aria-label="Tìm podcast"></div>
+    <div class="top-spacer"></div>
+    <button class="pill primary" id="uploadTop">＋ Đăng podcast</button>
+    <button class="avatar" id="accountTop" aria-label="Tài khoản">T</button>
+  </header>
+
+  <section class="hero">
+    <div>
+      <span class="eyebrow">● KHÔNG GIAN ÂM THANH CỦA BẠN</span>
+      <h1>Nghe điều bạn yêu.<br><span>Khám phá điều mới.</span></h1>
+      <p>Những câu chuyện, ý tưởng và giọng nói truyền cảm hứng — được tuyển chọn để đồng hành cùng bạn mỗi ngày.</p>
+      <div class="hero-actions"><button class="pill primary" onclick="document.getElementById('discover').scrollIntoView({behavior:'smooth'})">▶ Khám phá ngay</button><button class="pill" onclick="document.getElementById('upload').scrollIntoView({behavior:'smooth'})">＋ Chia sẻ podcast</button></div>
+    </div>
+    <div class="hero-art" aria-hidden="true"><div class="disc"></div><div class="float-card">✦ Đang thịnh hành<strong>Ý tưởng mỗi ngày</strong></div></div>
+  </section>
+
+  <section class="section" id="discover">
+    <div class="section-head"><div><h2>Khám phá podcast</h2><p>Chọn một chủ đề phù hợp với tâm trạng của bạn.</p></div><button class="text-button" id="clearSearch">Xem tất cả ↗</button></div>
+    <div class="chips" id="categoryChips">
+      <button class="chip active" data-category="Tất cả">Tất cả</button>
+      <button class="chip" data-category="Phát triển bản thân">Phát triển bản thân</button>
+      <button class="chip" data-category="Kinh doanh">Kinh doanh</button>
+      <button class="chip" data-category="Đời sống">Đời sống</button>
+      <button class="chip" data-category="Học tập">Học tập</button>
+      <button class="chip" data-category="Sáng tạo">Sáng tạo</button>
+    </div>
+    <div class="cards" id="podcastGrid"></div>
+    <div class="empty hidden" id="noResults">Chưa tìm thấy podcast phù hợp. Hãy thử từ khóa khác nhé.</div>
+  </section>
+
+  <section class="section" id="library">
+    <div class="section-head"><div><h2>Nghe gần đây</h2><p>Các chương trình bạn đã chọn trong phiên này.</p></div><span class="local-tag">LƯU TRÊN THIẾT BỊ</span></div>
+    <div id="recentList"><div class="empty">Bạn chưa phát podcast nào. Chọn một tập ở phía trên để bắt đầu nghe.</div></div>
+  </section>
+
+  <section class="section" id="favorites">
+    <div class="section-head"><div><h2>Podcast yêu thích</h2><p>Lưu lại những tập bạn muốn nghe lần nữa.</p></div><span class="local-tag">LƯU TRÊN THIẾT BỊ</span></div>
+    <div id="favoriteList"><div class="empty">Nhấn biểu tượng ♡ trên một podcast để thêm vào yêu thích.</div></div>
+  </section>
+
+  <section class="section" id="upload">
+    <div class="section-head"><div><h2>Không gian sáng tạo</h2><p>Chia sẻ câu chuyện và giọng nói của bạn.</p></div></div>
+    <div class="feature-grid">
+      <article class="feature"><div class="feature-icon">🎙</div><div><h3>Đăng tải podcast</h3><p>Chọn tệp âm thanh từ máy tính để nghe thử trong trình duyệt. Tệp chưa được gửi lên máy chủ.</p><div class="upload-box"><label for="audioFile"><strong>Chọn tệp âm thanh</strong></label><input id="audioFile" type="file" accept="audio/*"><input id="audioTitle" type="text" placeholder="Tên tập podcast (không bắt buộc)" style="margin-top:10px"><button class="pill primary" id="previewUpload" style="margin-top:10px">Nghe thử tệp đã chọn</button><p id="uploadStatus" aria-live="polite" style="margin:9px 0 0;font-size:12px;color:var(--muted)">Chưa chọn tệp.</p></div></div></article>
+      <article class="feature"><div class="feature-icon">👤</div><div><h3>Tài khoản người dùng</h3><p>Tài khoản thật cần đăng ký, đăng nhập an toàn và cơ sở dữ liệu. Bản này chỉ có hồ sơ minh họa, không gửi hoặc lưu mật khẩu.</p><span class="backend-tag">CẦN BACKEND</span><div style="margin-top:15px"><button class="pill" id="profileButton">Mở hồ sơ minh họa</button></div></div></article>
+    </div>
+    <div class="notice"><strong>Lưu ý về bản demo:</strong> VONICA là dự án học tập độc lập, không liên kết với Spotify. Trang này không thu thập dữ liệu người dùng. GitHub Pages chỉ lưu trữ giao diện tĩnh; đăng nhập thật, tải podcast lên máy chủ, đồng bộ yêu thích giữa thiết bị và quản lý nội dung cần backend/API cùng cơ sở dữ liệu.</div>
+  </section>
+  <footer class="footer">© 2026 VONICA Podcast · Dự án học tập độc lập · <strong>Không liên kết với Spotify.</strong></footer>
+</main>
+</div>
+
+<div class="player" aria-label="Trình phát podcast">
+  <div class="now-playing"><div class="now-cover" id="nowCover">♫</div><div class="now-info"><strong id="nowTitle">Chọn podcast để bắt đầu</strong><small id="nowAuthor">VONICA Podcast</small></div><button class="heart" id="playerHeart" aria-label="Thêm yêu thích">♡</button></div>
+  <div class="player-center"><div class="controls"><button class="control optional" id="prevBtn" title="Tập trước">↶</button><button class="control play" id="playBtn" title="Phát hoặc tạm dừng">▶</button><button class="control optional" id="nextBtn" title="Tập tiếp theo">↷</button></div><div class="progress-line"><span id="currentTime">0:00</span><input id="seek" type="range" min="0" max="100" value="0" aria-label="Tiến trình phát"><span id="totalTime">0:00</span></div></div>
+  <div class="volume"><span>◖))</span><input id="volume" type="range" min="0" max="1" step=".05" value=".8" aria-label="Âm lượng"></div>
+  <audio id="audio" preload="metadata"></audio>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<div class="modal-backdrop" id="accountModal">
+  <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <h2 id="modalTitle">Hồ sơ minh họa</h2>
+    <p>Đây chưa phải tài khoản thật. Không nhập mật khẩu hoặc thông tin nhạy cảm vào bản demo này.</p>
+    <label>Tên hiển thị<input id="displayName" maxlength="40" placeholder="Ví dụ: Trang"></label>
+    <label>Email minh họa (không gửi đi)<input id="displayEmail" type="email" placeholder="ban@example.com"></label>
+    <div class="modal-actions"><button class="pill" id="closeModal">Đóng</button><button class="pill primary" id="saveProfile">Lưu trên trình duyệt</button></div>
+    <p style="margin-top:12px;font-size:11px">Thông tin hồ sơ minh họa chỉ được lưu trong bộ nhớ phiên trang và không được gửi lên máy chủ.</p>
+  </section>
+</div>
+
+<script>
+(function(){
+  const demos=[
+    {id:'p1',title:'Những thói quen nhỏ, thay đổi lớn',author:'Chậm Một Nhịp',category:'Phát triển bản thân',duration:'18 phút',icon:'☀',cover:'c1',description:'Bắt đầu từ những điều nhỏ nhất để sống có chủ đích hơn.'},
+    {id:'p2',title:'Ý tưởng thành hành động',author:'Góc Nhìn Mới',category:'Kinh doanh',duration:'24 phút',icon:'↗',cover:'c2',description:'Tư duy thực tế cho hành trình biến ý tưởng thành giá trị.'},
+    {id:'p3',title:'Chuyện của những ngày bình thường',author:'Một Tách Trà',category:'Đời sống',duration:'16 phút',icon:'☕',cover:'c3',description:'Những câu chuyện giản dị và góc nhìn ấm áp về cuộc sống.'},
+    {id:'p4',title:'Học sâu, nhớ lâu',author:'Mở Trang Sách',category:'Học tập',duration:'21 phút',icon:'✎',cover:'c4',description:'Cách học tập chủ động và xây dựng thói quen bền vững.'},
+    {id:'p5',title:'Sáng tạo không cần hoàn hảo',author:'Xưởng Ý Tưởng',category:'Sáng tạo',duration:'19 phút',icon:'✧',cover:'c5',description:'Cho phép bản thân thử nghiệm, sai và tạo ra điều mới.'},
+    {id:'p6',title:'Lắng nghe chính mình',author:'Chậm Một Nhịp',category:'Phát triển bản thân',duration:'14 phút',icon:'♡',cover:'c6',description:'Một khoảng lặng để nhận ra điều thật sự quan trọng.'},
+    {id:'p7',title:'Thương mại điện tử từ đâu?',author:'Góc Nhìn Mới',category:'Kinh doanh',duration:'27 phút',icon:'▦',cover:'c7',description:'Khám phá cách cửa hàng trực tuyến tạo trải nghiệm tốt hơn.'},
+    {id:'p8',title:'Tập trung giữa thế giới ồn ào',author:'Mở Trang Sách',category:'Học tập',duration:'17 phút',icon:'◉',cover:'c8',description:'Tạo không gian tập trung và quản lý sự chú ý mỗi ngày.'}
+  ];
+  let uploads=[], current=null, activeCategory='Tất cả', query='', recent=[], favorites=new Set(), customAudioUrl=null;
+  const $=id=>document.getElementById(id);
+  const audio=$('audio');
+  function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+  function allPods(){return demos.concat(uploads);}
+  function toast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.classList.remove('show'),2600);}
+  function formatTime(s){if(!Number.isFinite(s)||s<0)return '0:00';return Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0');}
+  function renderCards(){
+    const list=allPods().filter(p=>(activeCategory==='Tất cả'||p.category===activeCategory)&&(`${p.title} ${p.author} ${p.category} ${p.description||''}`).toLowerCase().includes(query.toLowerCase()));
+    $('podcastGrid').innerHTML=list.map(p=>`<article class="pod-card"><div class="cover ${p.cover||'c1'}"><span>${escapeHtml(p.icon||'♫')}</span></div><div class="pod-title" title="${escapeHtml(p.title)}">${escapeHtml(p.title)}</div><div class="pod-meta">${escapeHtml(p.author)} · ${escapeHtml(p.category)}</div><div class="card-bottom"><button class="mini-play" data-play="${escapeHtml(p.id)}" aria-label="Phát ${escapeHtml(p.title)}">▶</button><span class="duration">${escapeHtml(p.duration||'Tệp cá nhân')}</span><button class="heart ${favorites.has(p.id)?'liked':''}" data-fav="${escapeHtml(p.id)}" aria-label="Yêu thích">${favorites.has(p.id)?'♥':'♡'}</button></div></article>`).join('');
+    $('noResults').classList.toggle('hidden',list.length!==0);
+  }
+  function rowHtml(p,buttonText='▶'){return `<div class="library-row"><div class="library-art">${escapeHtml(p.icon||'♫')}</div><div class="library-info"><strong>${escapeHtml(p.title)}</strong><small>${escapeHtml(p.author)} · ${escapeHtml(p.category||'Podcast của bạn')}</small></div><button class="mini-play" data-play="${escapeHtml(p.id)}" aria-label="Phát">${buttonText}</button></div>`;}
+  function renderLists(){
+    const fav=allPods().filter(p=>favorites.has(p.id));
+    $('favoriteList').innerHTML=fav.length?fav.map(p=>rowHtml(p)).join():'<div class="empty">Nhấn biểu tượng ♡ trên một podcast để thêm vào yêu thích.</div>';
+    const rec=recent.map(id=>allPods().find(p=>p.id===id)).filter(Boolean);
+    $('recentList').innerHTML=rec.length?rec.map(p=>rowHtml(p)).join():'<div class="empty">Bạn chưa phát podcast nào. Chọn một tập ở phía trên để bắt đầu nghe.</div>';
+  }
+  function findPod(id){return allPods().find(p=>p.id===id);}
+  function playPod(id){
+    const p=findPod(id);if(!p)return;
+    current=p;
+    $('nowTitle').textContent=p.title;$('nowAuthor').textContent=p.author;$('nowCover').textContent=p.icon||'♫';
+    $('playerHeart').textContent=favorites.has(p.id)?'♥':'♡';$('playerHeart').classList.toggle('liked',favorites.has(p.id));
+    if(p.url){audio.src=p.url;audio.play().then(()=>{$('playBtn').textContent='Ⅱ';}).catch(()=>{ $('playBtn').textContent='▶';toast('Không phát được tệp. Hãy thử chọn lại tệp âm thanh.');});}
+    else {audio.pause();audio.removeAttribute('src');audio.load();$('playBtn').textContent='▶';toast('Đây là podcast minh họa. Chọn tệp âm thanh của bạn để nghe thử thật.');}
+    recent=[p.id,...recent.filter(x=>x!==p.id)].slice(0,6);renderLists();
+  }
+  function toggleFavorite(id){if(favorites.has(id))favorites.delete(id);else favorites.add(id);renderCards();renderLists();if(current&&current.id===id){$('playerHeart').textContent=favorites.has(id)?'♥':'♡';$('playerHeart').classList.toggle('liked',favorites.has(id));}toast(favorites.has(id)?'Đã thêm vào yêu thích':'Đã xóa khỏi yêu thích');}
+  document.addEventListener('click',e=>{
+    const play=e.target.closest('[data-play]');if(play){playPod(play.dataset.play);return;}
+    const fav=e.target.closest('[data-fav]');if(fav){toggleFavorite(fav.dataset.fav);return;}
+    const go=e.target.closest('[data-go]');if(go){const id=go.dataset.go;document.getElementById(id)?.scrollIntoView({behavior:'smooth'});document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b===go));}
+  });
+  $('categoryChips').addEventListener('click',e=>{const b=e.target.closest('[data-category]');if(!b)return;activeCategory=b.dataset.category;document.querySelectorAll('.chip').forEach(c=>c.classList.toggle('active',c===b));renderCards();});
+  $('searchInput').addEventListener('input',e=>{query=e.target.value;renderCards();});
+  $('clearSearch').addEventListener('click',()=>{$('searchInput').value='';query='';activeCategory='Tất cả';document.querySelectorAll('.chip').forEach(c=>c.classList.toggle('active',c.dataset.category==='Tất cả'));renderCards();});
+  $('uploadTop').onclick=()=>$('upload').scrollIntoView({behavior:'smooth'});
+  $('playBtn').onclick=()=>{if(!current){toast('Hãy chọn một tệp âm thanh hoặc podcast để bắt đầu.');return;}if(!current.url){toast('Podcast này là nội dung minh họa, chưa có âm thanh.');return;}if(audio.paused)audio.play().then(()=>$('playBtn').textContent='Ⅱ');else audio.pause();};
+  audio.addEventListener('play',()=>$('playBtn').textContent='Ⅱ');audio.addEventListener('pause',()=>$('playBtn').textContent='▶');
+  audio.addEventListener('timeupdate',()=>{if(audio.duration){$('seek').value=audio.currentTime/audio.duration*100;$('currentTime').textContent=formatTime(audio.currentTime);$('totalTime').textContent=formatTime(audio.duration);}});
+  $('seek').addEventListener('input',()=>{if(audio.duration)audio.currentTime=Number($('seek').value)/100*audio.duration;});
+  $('volume').addEventListener('input',()=>audio.volume=Number($('volume').value));
+  $('playerHeart').onclick=()=>{if(current)toggleFavorite(current.id);else toast('Hãy chọn podcast trước nhé.');};
+  $('nextBtn').onclick=()=>{const list=allPods();if(!current)return;const i=list.findIndex(p=>p.id===current.id);playPod(list[(i+1)%list.length].id);};
+  $('prevBtn').onclick=()=>{const list=allPods();if(!current)return;const i=list.findIndex(p=>p.id===current.id);playPod(list[(i-1+list.length)%list.length].id);};
+  $('audioFile').addEventListener('change',()=>{const f=$('audioFile').files[0];$('uploadStatus').textContent=f?`Đã chọn: ${f.name} (${(f.size/1024/1024).toFixed(1)} MB). Chưa tải lên máy chủ.`:'Chưa chọn tệp.';});
+  $('previewUpload').onclick=()=>{
+    const f=$('audioFile').files[0];if(!f){toast('Trước tiên hãy chọn tệp âm thanh.');return;}
+    if(customAudioUrl)URL.revokeObjectURL(customAudioUrl);customAudioUrl=URL.createObjectURL(f);
+    const title=$('audioTitle').value.trim()||f.name.replace(/\.[^.]+$/,'');
+    const p={id:'u'+Date.now(),title,author:'Tệp trên thiết bị của bạn',category:'Podcast của bạn',duration:'Tệp cá nhân',icon:'🎙',cover:'c5',url:customAudioUrl,description:'Tệp nghe thử cục bộ.'};
+    uploads.unshift(p);renderCards();playPod(p.id);$('uploadStatus').textContent='Đang phát tệp cục bộ. Tệp không được tải lên máy chủ và sẽ không tự xuất hiện trên thiết bị khác.';toast('Đã thêm tệp vào phiên nghe thử trên trình duyệt.');
+  };
+  const modal=$('accountModal');
+  function openModal(){modal.classList.add('show');}
+  function closeModal(){modal.classList.remove('show');}
+  $('accountTop').onclick=openModal;$('sidebarAccount').onclick=openModal;$('profileButton').onclick=openModal;$('closeModal').onclick=closeModal;
+  modal.addEventListener('click',e=>{if(e.target===modal)closeModal();});
+  $('saveProfile').onclick=()=>{const name=$('displayName').value.trim();if(name)$('accountTop').textContent=name.slice(0,1).toUpperCase();closeModal();toast('Đã cập nhật hồ sơ minh họa trong phiên này.');};
+  renderCards();renderLists();audio.volume=.8;
+})();
+</script>
+</body>
+</html>
